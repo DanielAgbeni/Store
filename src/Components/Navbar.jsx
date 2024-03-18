@@ -91,7 +91,7 @@ const Navbar = () => {
 				</div>
 			</div>
 			<div>
-				<ul className=' flex items-center justify-between gap-4 text-sm bg-gray-200 px-4 rounded-full mt-2'>
+				<ul className=' md:hidden flex items-center justify-between gap-4 text-sm bg-gray-200 px-4 rounded-full mt-2'>
 					<li
 						onClick={() => {
 							setMenu('shop');
