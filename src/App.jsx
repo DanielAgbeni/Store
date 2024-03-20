@@ -6,6 +6,10 @@ import Auth from './Pages/Auth';
 import Category from './Pages/Category';
 import Products from './Pages/Products';
 import Cart from './Pages/Cart';
+import Footer from './Components/Footer';
+import men from './assets/banner_mens.png';
+import women from './assets/banner_women.png';
+import kids from './assets/banner_kids.png';
 
 const App = () => {
 	return (
@@ -22,18 +26,30 @@ const App = () => {
 				/>
 				<Route
 					path='/men'
-					element={<Category />}
-					category='men'
+					element={
+						<Category
+							banner={men}
+							category='men'
+						/>
+					}
 				/>
 				<Route
 					path='/women'
-					element={<Category />}
-					category='women'
+					element={
+						<Category
+							banner={women}
+							category='women'
+						/>
+					}
 				/>
 				<Route
 					path='/kids'
-					element={<Category />}
-					category='kids'
+					element={
+						<Category
+							banner={kids}
+							category='kids'
+						/>
+					}
 				/>
 				<Route
 					path='/product'
@@ -48,6 +64,7 @@ const App = () => {
 					element={<Cart />}
 				/>
 			</Routes>
+			<Footer />
 		</div>
 	);
 };
