@@ -65,11 +65,11 @@ const Navbar = () => {
 						</li>
 						<li
 							onClick={() => {
-								setMenu('kids');
+								setMenu('kid');
 							}}
 							className=' cursor-pointer hover:scale-110 transform transition ease-in-out duration-300 '>
 							<Link to={'/kids'}>Kids</Link>
-							{menu === 'kids' ? <hr /> : ''}
+							{menu === 'kid' ? <hr /> : ''}
 						</li>
 					</ul>
 				</div>
@@ -148,11 +148,11 @@ const Navbar = () => {
 					</li>
 					<li
 						onClick={() => {
-							setMenu('kids');
+							setMenu('kid');
 						}}
 						className=' cursor-pointer hover:scale-110 transform transition ease-in-out duration-300 '>
 						<Link to={'/kids'}>Kids</Link>
-						{menu === 'kids' ? <hr /> : ''}
+						{menu === 'kid' ? <hr /> : ''}
 					</li>
 				</ul>
 			</div>

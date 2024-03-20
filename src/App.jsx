@@ -47,7 +47,7 @@ const App = () => {
 					element={
 						<Category
 							banner={kids}
-							category='kids'
+							category='kid'
 						/>
 					}
 				/>
