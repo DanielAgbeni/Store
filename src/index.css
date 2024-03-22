@@ -27,7 +27,7 @@ hr {
 }
 
 .trans {
-    transition: all 0.7s ease-in-out;
+    transition: all 0.4s ease-in-out;
     /* Adjust the duration and timing function as needed */
 }
 
