@@ -1,7 +1,12 @@
 import React from 'react';
+import CartItems from '../Components/CartItems';
 
 const Cart = () => {
-	return <div className=' flex items-center justify-center h-screen'>Cart</div>;
+	return (
+		<div className=' '>
+			<CartItems />
+		</div>
+	);
 };
 
 export default Cart;

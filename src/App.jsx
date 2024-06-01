@@ -10,12 +10,14 @@ import Footer from './Components/Footer';
 import men from './assets/banner_mens.png';
 import women from './assets/banner_women.png';
 import kids from './assets/banner_kids.png';
+import ScrollToTop from './Components/ScrollToTop';
+// Import the ScrollToTop component
 
 const App = () => {
 	return (
 		<div>
 			<Navbar />
-
+			<ScrollToTop /> {/* Add the ScrollToTop component */}
 			<Routes>
 				<Route
 					path='/'

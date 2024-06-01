@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MdAddShoppingCart } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { ShopContext } from '../Context/ShopContext';
 
 const Item = (props) => {
+	const { addToCart } = useContext(ShopContext);
+	const { product } = props;
 	return (
 		<div className='group relative'>
 			<Link to={`/product/${props.id}`}>
@@ -22,7 +26,7 @@ const Item = (props) => {
 							{props.name}
 						</h3>
 					</div>
-					<div className=' flex items-center justify-start gap-3'>
+					<div className=' flex items-center justify-start gap-3 relative'>
 						<p className='text-sm font-medium text-gray-900'>
 							${props.new_price}
 						</p>
@@ -32,6 +36,12 @@ const Item = (props) => {
 					</div>
 				</div>
 			</Link>
+			<MdAddShoppingCart
+				className=' z-50 absolute bottom-1 right-0 text-xl cursor-pointer'
+				onClick={() => {
+					addToCart(props.id);
+				}}
+			/>
 		</div>
 	);
 };

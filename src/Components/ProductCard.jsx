@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ShopContext } from '../Context/ShopContext';
 
 const ProductCard = (props) => {
 	const { product } = props;
+	const { addToCart } = useContext(ShopContext);
 	return (
 		<div className='flex flex-col md:flex-row items-center md:items-start md:space-x-8'>
 			<div className='md:w-1/2'>
@@ -76,7 +78,11 @@ const ProductCard = (props) => {
 						</select>
 					</div>
 				</div>
-				<button className='bg-red-600 text-white py-2 px-4 rounded mt-4 hover:bg-red-700'>
+				<button
+					className='bg-red-600 text-white py-2 px-4 rounded mt-4 hover:bg-red-700'
+					onClick={() => {
+						addToCart(product.id);
+					}}>
 					Add to Cart
 				</button>
 				<div className='mt-4'>
