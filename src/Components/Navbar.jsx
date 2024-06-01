@@ -121,7 +121,7 @@ const Navbar = () => {
 							alt='cart'
 							className='h-8 w-8'
 						/>
-						{all && (
+						{all > 0 && (
 							<span className='absolute -top-1 right-0 bg-red-500 h-5 w-5 rounded-full flex items-center justify-center text-white'>
 								{all}
 							</span>
